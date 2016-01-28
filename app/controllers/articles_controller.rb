@@ -1,10 +1,15 @@
 class ArticlesController < ApplicationController
+
+  def index
+    @articles = Article.all.reverse
+  end
+
 	def new
 	end
+
   def show
     @article = Article.find(params[:id])
   end
-
 
 	def create
   @article = Article.new(article_params)
