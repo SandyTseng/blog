@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 
+
   def index
     @articles = Article.all.reverse
   end
@@ -17,6 +18,7 @@ class ArticlesController < ApplicationController
   @article.save
   redirect_to @article
   end
+  http_basic_authenticate_with name: "sandy", password: "secret", except: [:index, :show]
 
 private
   def article_params
