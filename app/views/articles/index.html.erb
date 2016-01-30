@@ -28,14 +28,13 @@
           <% @articles.each do |article| %>
             <div class="post-preview">
                <%= link_to(article_path(article)) do %>
-                      <h2 class="post-title">
-                        <%= article.title %>
-                      </h2>
-                    <% end %>
-                    <h3 class="post-subtitle">
-                        <%= article.text %>
-                    </h3>
-                
+                  <h2 class="post-title">
+                    <%= article.title %>
+                  </h2>
+                <% end %>
+                <p>
+                  <%= article.text %>
+                </p>
              </div>
              <hr>
           <% end %>
