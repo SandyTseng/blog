@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
  has_many :comments
   validates :title, presence: true,
-                    length: { minimum: 8 }
+                    length: { minimum: 2 }
 end
